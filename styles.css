@@ -1,0 +1,120 @@
+
+@keyframes fade-s {
+  0%, 100% { opacity: 0 }
+  50% { opacity: 1 }
+}
+
+@keyframes fade-c {
+  0%, 100% { opacity: 1}
+  50% { opacity: 0 }
+}
+
+@keyframes jump {
+    0% {
+        left: -14%
+    }
+    50% {
+        left: 14%
+    }
+    100% {
+        left: -14%
+    }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: 'Dancing Script', cursive;
+  display: flex;
+  justify-content: center;
+  background-color: #BAF6D8;
+  margin: 10px;
+  margin-bottom: 30px;
+  font-size: 50px;
+}
+.square {
+  opacity: 1;
+  animation: fade-s 4s infinite;
+  /* animation-delay: 4s */
+  /* animation-delay: 4s infinite; */
+}
+.circle {
+  opacity: 1;
+  animation: fade-c 4s infinite;
+}
+
+h1 {
+    position: relative;
+    left: 0;
+    top: 0;
+    /* apply the animation to the element by calling its name here */
+    /* animation-name: jump;
+    animation-duration: 3s; */
+    animation: jump 4s infinite;
+    /* other animation controls */
+}
+
+h6 {
+  font-family: 'Dancing Script', cursive;
+  display: flex;
+  justify-content: center;
+  background-color: #BAF6D8;
+  margin: 10px;
+  margin-top: 30px;
+  font-size: 20px;
+}
+
+
+.circle {
+  height: 250px;
+  width: 250px;
+  object-fit: cover;
+  border-radius: 150px;
+}
+.square {
+  height: 250px;
+  width: 250px;
+  object-fit: cover;
+}
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10px;
+}
+
+
+@media screen and (max-width:1300px){
+  .images {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  .circle {
+    width: 33%;
+    object-fit: cover;
+    border-radius: 100%;
+  }
+  .square {
+    width: 33%;
+    object-fit: cover;
+  }
+
+}
+
+@media screen and (max-width:900px){
+  .circle {
+    width: 100%;
+    /* height: 100%; */
+    object-fit: cover;
+    border-radius: 100%;
+  }
+  .square {
+    width: 100%;
+    /* height: 100%; */
+    object-fit: cover;
+  }
+
+}
